@@ -4,5 +4,5 @@ searchText.value = "I have felt lucky!";
 let searchButton = document.getElementsByName("btnK")[0];
 searchButton.click();
 
-console.info("I have done some work for you!")
+console.info("I have done some work for you! I am from a script file!")
 

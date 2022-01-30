@@ -20,6 +20,6 @@ searchGoogleButton.addEventListener("click", async () => {
     let [tab] = await chrome.tabs.query({active: true, currentWindow: true});
     await chrome.scripting.executeScript({
         target: {tabId: tab.id},
-        function: searchGoogle,
+        files:["/content-scripts/feeling-lucky.js"]
     });
 });
