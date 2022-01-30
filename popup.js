@@ -1,25 +1,25 @@
 // Initialize button with user's preferred color
-let changeColor = document.getElementById("changeColor");
+let searchGoogleButton = document.getElementById("searchGoogle");
 
-chrome.storage.sync.get("color", ({color}) => {
-    changeColor.style.backgroundColor = color;
-});
+ function searchGoogle(url) {
+    //if (url.includes("https://www.google.com")) {
+        let searchText = document.getElementsByName("q")[0];
+        searchText.value = "I have felt lucky!";
 
-// The body of this function will be executed as a content script inside the
-// current page
-function setPageBackgroundColor() {
-    chrome.storage.sync.get("color", ({color}) => {
-        document.body.style.backgroundColor = color;
-    });
+        let searchButton = document.getElementsByName("btnK")[0];
+        searchButton.click();
+
+        console.info("I have done some work for you!");
+  /*  } else {
+        console.error("You are calling me from a wrong place!")
+    }*/
 }
 
 // When the button is clicked, inject setPageBackgroundColor into current page
-changeColor.addEventListener("click", async () => {
+searchGoogleButton.addEventListener("click", async () => {
     let [tab] = await chrome.tabs.query({active: true, currentWindow: true});
-
     await chrome.scripting.executeScript({
         target: {tabId: tab.id},
-        function: setPageBackgroundColor,
+        function: searchGoogle,
     });
 });
-

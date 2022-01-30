@@ -11,12 +11,6 @@
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["https://www.google.com/"],
-      "js": ["/content-scripts/feeling-lucky.js"]
-    }
-  ],
   "icons": {
     "16": "plum16.png",
     "48": "plum64.png",
