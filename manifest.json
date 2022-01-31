@@ -6,10 +6,14 @@
   "permissions": [
     "storage",
     "activeTab",
-    "scripting"
+    "scripting",
+    "bookmarks"
+  ],
+  "host_permissions": [
+    "https://*.google.com/"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "bookmark-explorer.js"
   },
   "icons": {
     "16": "plum16.png",
