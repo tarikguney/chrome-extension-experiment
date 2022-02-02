@@ -9,14 +9,8 @@
     "scripting",
     "bookmarks"
   ],
-  "content_scripts": [
-    {
-      "matches": ["https://*/*"],
-      "js": ["bookmark-listener-content-script.js"]
-    }
-  ],
   "background": {
-    "service_worker": "bookmark-explorer.js"
+    "service_worker": "backgroundChangeScript.js"
   },
   "icons": {
     "16": "plum16.png",
