@@ -1,3 +1,10 @@
-# EAT YOUR FOOD, KIDS!
+# Chrome Extension Sample
 
-This will pause the playing video for a determined amount of time for kids to finish their food, and so that the parents can have a piece of mind while their kids are devouring their breakfast.
+Just me learning Google Chrome extension development.
+
+Followed this tutorial here: https://developer.chrome.com/docs/extensions/mv3/getstarted/
+
+# Try it out on your machine
+
+Load the extension: https://developer.chrome.com/docs/extensions/mv3/getstarted/#unpacked
+
